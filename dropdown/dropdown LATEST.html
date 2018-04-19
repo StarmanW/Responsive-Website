@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form>
+            <select id="1">
+                <option disabled selected>SELECT Value</option>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="aaa">aaaa</option>
+            </select>
+
+            <select id="2">
+                <option disabled selected>SELECT Value</option>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="aaa">aaaa</option>
+            </select>
+
+            <select id="3">
+                <option disabled selected>SELECT Value</option>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="aaa">aaaa</option>
+            </select>
+
+            <select id="4">
+                <option disabled selected>SELECT Value</option>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="aaa">aaaa</option>
+            </select>
+            
+            <button type="reset" onclick="resetSelect();">Reset</button>
+        </form>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" /></script>
+    <script>
+        $(document).ready(function () {
+            $('select').change(function () {                                        //Once a select tag is changed, perform a function
+                $('option[value=' + $(this).val() + ']').prop('disabled', true);    //Disable the selected option across all other select tag by setting
+            });                                                                     //the 'disabled' property (prop) to true 
+        });
+        
+        //Function to reset all select option to enabled
+        function resetSelect() {
+            $('select').each(function() {                                   //Target all the select tag and each of them do a function 
+                $('option').prop('disabled', false);                        //Each of the options are being re-enabled so user can choose again
+                $('option:contains("SELECT Value")').prop('disabled', true);//Select all the options that contains "SELECT Value" as the displayed 
+            });                                                             //text and then set the "disabled" property to true so user cannot select
+        }                                                                   //"SELECT Value" after the reset
+    </script>
+
+</body>
+</html>

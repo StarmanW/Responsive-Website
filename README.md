@@ -1,2 +1,2 @@
-# Responsive-Website
-A test responsive website
+# Web Design Collection
+A collection of webpages designs and stuffs.
