@@ -27,5 +27,5 @@ if ($name !== "") {
     }
 }
 
-echo $suggestions === "" ? "No such names found." : $suggestions;
+echo $suggestions === "" ? "No such name found." : $suggestions;
 ?>
