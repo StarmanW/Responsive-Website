@@ -15,7 +15,6 @@ $name = $_REQUEST['name'];
 $suggestions = "";
 
 if ($name !== "") {
-    $len = strlen($name);
     foreach ($names as $nm) {
         if (preg_match("/^.*" . preg_quote($name) . ".*$/i", $nm)) {
             if ($suggestions === "") {

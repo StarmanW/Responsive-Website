@@ -15,7 +15,7 @@
         <form action="" method="GET" class="form" autocomplete="off">
             <div class="form-group">
                 <label for="search">Search:</label>
-                <input type="text" class="form-control" name="search" id="searchBox" placeholder="Search names here..." onkeyup="showSuggestion(this.value)">
+                <input type="text" class="form-control" name="search" id="searchBox" placeholder="Search names here..." oninput="showSuggestion(this.value)">
                 <p>Suggestions Name List: <br/>
                     <span id="output" style="font-weight:bold;"></span>
                 </p>
