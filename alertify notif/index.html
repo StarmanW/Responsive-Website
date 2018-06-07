@@ -11,15 +11,19 @@
     <script src="http://cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/alertify.min.js"></script>
     <title>Alertify Notification Demo</title>
 </head>
+
 <body>
     <script>
-        alertify.alert('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac ligula sed enim faucibus dapibus.').setting(
-            {
-                'transition': 'zoom',
-                'movable': false,
-                'modal': true,
-                'label': "OK",
-        }).setHeader('Title Here').show();
+        const alertifyConfigs = {
+            'transition': 'zoom',
+            'movable': false,
+            'modal': true,
+            'label': "OK",
+        }
+        alertify.alert('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac ligula sed enim faucibus dapibus.')
+            .setting(alertifyConfigs)
+            .setHeader('Title Here').show();
     </script>
 </body>
+
 </html>

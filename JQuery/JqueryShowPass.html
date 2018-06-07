@@ -12,16 +12,15 @@
     <label>Password: </label>
     <input type="password" name="password">
     <button type="button" id="showPassBtn">Hover to show sassword</button>
-</body>
-<script type="text/javascript">
-$(document).ready(function() {
-    $('#showPassBtn').hover(function() { //.hover(handlerIn, handlerOut);
-            $('input[name="password"]').prop('type', 'text');
-        },
-        function() {
-            $('input[name="password"]').prop('type', 'password');
-        });
-});
-</script>
 
+    <script type="text/javascript">
+        $(window).on('load', () => {    //.hover(handlerIn, handlerOut);
+            $('#showPassBtn').hover(() => {
+                $('input[name="password"]').attr('type', 'text');
+            }, () => {
+                $('input[name="password"]').attr('type', 'password');
+            });
+        });
+    </script>
+</body>
 </html>
